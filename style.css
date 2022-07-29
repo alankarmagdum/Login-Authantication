@@ -1,0 +1,97 @@
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: rgb(151, 208, 135);
+}
+
+.para-1 {
+    background-image: url(./images/fitness.jpg);
+    min-height: 100%;
+}
+
+.para-2 {
+    background-image: url(.//images/Strength.jpg);
+    min-height: 100%;
+}
+
+.para-3 {
+    background-image: url(./images/Aerobic-exercise.jpg);
+    min-height: 100%;
+}
+
+.para-4 {
+    background-image: url(./images/flexibility.jpg);
+    min-height: 100%;
+}
+
+.para-5 {
+    background-image: url(./images/Health.jpg);
+    min-height: 100%;
+}
+
+.para-1,
+.para-2,
+.para-3,
+.para-4,
+.para-5 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.para-text {
+    width: 50%;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    background: rgb(113, 217, 156);
+}
+
+.section {
+    padding: 3rem 8rem;
+    text-align: center;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active{
+  background-color: #04AA6D;;
+}
