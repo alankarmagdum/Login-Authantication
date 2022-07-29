@@ -1,50 +1,123 @@
-// ---------------------------------------------- Sign UP _____-------------------------------------
+// // ---------------------------------------------- Sign UP _____-------------------------------------
 
-function signup(){
+// function signUp(){
     
+//     var email = document.getElementById("email").value;
+//     var password = document.getElementById("password").value;
+
+// const account = {
+// email: email,
+// password: password,
+
+// }
+
+// if(localStorage.getItem('user'))
+// {
+//     let oldUsers =JSON.parse(localStorage.getItem('user'))
+//     console.log(oldUsers)
+//     let array = [...oldUsers,account]
+//     localStorage.setItem("user",JSON.stringify(array));
+// }
+
+// else{
+//     localStorage.setItem("user",JSON.stringify([account]));
+// }
+
+
+
+// }
+
+
+
+
+
+// // ------------------------------------------ Log In ---------------------------------------//
+
+// function login(){
+// var emailUser = document.getElementById("email").value;
+// var passwordUser = document.getElementById("password").value;
+
+
+// var user= JSON.parse(localStorage.getItem("user"));
+// console.log(user);
+
+// if(user && user.length !==0)
+// {
+//     let findUser = user.filter((item)=> item.email === emailUser && item.password === passwordUser)
+//     console.log(findUser);
+
+//     if(findUser && findUser.length!==0)
+//     {
+//         window.location.href="index.html";
+//     }
+//     else
+//     {
+//         alert("User password is not matched");
+//     }
+// }
+// else
+//     {
+//             alert("Username and password is not found");
+//     }
+// }
+
+
+
+
+
+
+function signup() {
     var email = document.getElementById("email").value;
-    var password = document.getElementById("pass").value;
+    var password = document.getElementById("password").value;
 
-const profile = {
-email: email,
-password: password,
-}
+    const account = {
+        email: email,
+        password: password,
+    }
 
-localStorage.setItem("user",JSON.stringify(profile)); 
+    if (localStorage.getItem('user')) {
+        let oldUsers = JSON.parse(localStorage.getItem('user'))
+        console.log(oldUsers)
+        let array = [...oldUsers, account]
+        localStorage.setItem("user", JSON.stringify(array));
+    }
+    else {
+        localStorage.setItem("user", JSON.stringify([account]));
+    }
+
+
+
 }
 
 // ------------------------------------------ Log In ---------------------------------------//
 
-function login(){
-var emailUser = document.getElementById("email").value;
-var passwordUser = document.getElementById("pass").value;
+function login() {
+    var emailUser = document.getElementById("email").value;
+    var passwordUser = document.getElementById("password").value;
+
+    var user = JSON.parse(localStorage.getItem("user"));
+    console.log(user);
 
 
-var user= JSON.parse(localStorage.getItem("user"));
+    if (user && user.length !== 0) {
+        let findUser = user.filter((item) => item.email === emailUser && item.password === passwordUser)
+        // console.log(findUser)
 
-const {email,password}=user;
+        if (findUser && findUser.length !== 0) 
+        {
+            // alert("user login successfully");
+           window.location.href="index.html";
+        //    console.log("you are IN");
+        }
+        else {
+            alert("user password is not match");
+        }
+    }
+    else {
+        alert("username and password is not found");
+    }
 
 
-console.log(email);
-console.log(password);
 
 
-
-
-if(email === emailUser && password === passwordUser ){
-    // alert("you are logged in");
-    // console.log("You Are In")
-    window.location.href="index.html";
-   
 }
-else{
-    // window.location.href="index.html";
-    alert("error");
-    // console.log("You Are Out");
-
-}
-}
-
-
-
-
